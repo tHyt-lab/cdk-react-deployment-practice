@@ -8,21 +8,27 @@
     "build": "tsc",
     "watch": "tsc -w",
     "test": "jest",
-    "cdk": "cdk"
+    "cdk": "cdk",
+    "deploy": "cd react-app && npm run build && cd ../ && npm run build && cdk deploy --require-approval never"
   },
   "devDependencies": {
+    "@types/aws-lambda": "^8.10.102",
     "@types/jest": "^27.5.2",
     "@types/node": "10.17.27",
+    "@types/node-fetch": "^2.6.2",
     "@types/prettier": "2.6.0",
+    "aws-cdk": "2.40.0",
+    "esbuild": "^0.15.7",
     "jest": "^27.5.1",
     "ts-jest": "^27.1.4",
-    "aws-cdk": "2.40.0",
     "ts-node": "^10.9.1",
     "typescript": "~3.9.7"
   },
   "dependencies": {
+    "@aws-cdk/aws-lambda-nodejs": "^1.171.0",
     "aws-cdk-lib": "2.40.0",
     "constructs": "^10.0.0",
+    "node-fetch": "^2.6.7",
     "source-map-support": "^0.5.21"
   }
 }
