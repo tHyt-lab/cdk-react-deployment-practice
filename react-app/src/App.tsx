@@ -1,6 +1,8 @@
 import { useRef, useState } from 'react';
+import { Link } from 'react-router-dom';
 import reactLogo from './assets/react.svg';
 import './App.css';
+import About from './pages/About';
 
 function App() {
   const inputRef = useRef<HTMLInputElement>(null);
@@ -27,6 +29,7 @@ function App() {
         </a>
       </div>
       <h1>Vite + React</h1>
+      <Link to="/about">about</Link>
       <div className="card">
         <button onClick={() => setCount((count) => count + 1)}>count is {count}</button>
         <p>
